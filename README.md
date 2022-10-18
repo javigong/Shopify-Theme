@@ -16,7 +16,7 @@
 
   `shopify theme serve`
 
-## TailwindCSS 2.2.7 setup
+## Tailwind CSS 2.2.7 setup
 
 - Check if you are logged in
 
@@ -71,7 +71,7 @@
     <script src="{{ 'application.js' | asset_url }}" async></script>
 ```
 
-## Tailwind 3.0 setup
+## Tailwind CSS 3.0 setup
 
 - Check if you are logged in
 
