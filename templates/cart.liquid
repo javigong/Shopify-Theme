@@ -13,29 +13,37 @@
           <tr>
             <td>
               <a href="{{ item.url | within: collections.all }}">
-                <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
+                <img src="{{ item | image_url: width: 240, height: 240 }}" alt="{{ item.title | escape }}">
               </a>
             </td>
             <td>
-              <a href="{{ item.url }}">{{ item.product.title }}</a>
+              <a href="{{ item.url }}">{{ item.product.title }}
+              </a>
               {{ item.variant.title }}
               <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">remove</a>
             </td>
-            <td>{{ item.price | money }}</td>
+            <td>{{ item.price | money }}
+            </td>
             <td>
               <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
             </td>
             <td>
-              {% if item.original_line_price != item.line_price %}{{ item.original_line_price | money }}{% endif %}
+              {% if item.original_line_price != item.line_price %}
+                {{ item.original_line_price | money }}
+              {% endif %}
               {{ item.line_price | money }}
-              {% for discount in item.discounts %}{{ discount.title }}{% endfor %}
+              {% for discount in item.discounts %}
+                {{ discount.title }}
+              {% endfor %}
             </td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
     <div>
-      <p>sub total : {{ cart.total_price | money }}</p>
+      <p>sub total :
+        {{ cart.total_price | money }}
+      </p>
       <button type="submit" name="update">Update</button>
       <button type="submit" name="checkout">Checkout</button>
     </div>
