@@ -1,5 +1,7 @@
 # How To Create a Shopify Theme
 
+Creating a Shopify theme for an Online Store 2.0 (JSON Templates) using Shopify CLI, Liquid, & TailwindCSS.
+
 ## Initial Theme Setup
 
 - Create a basic theme structure:
