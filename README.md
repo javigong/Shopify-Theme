@@ -148,3 +148,7 @@ module.exports = {
     {{ 'application.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'application.js' | asset_url }}" async></script>
 ```
+
+## JSON Templates
+
+https://shopify.dev/themes/architecture/templates/json-templates
